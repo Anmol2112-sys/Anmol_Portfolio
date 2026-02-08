@@ -1,158 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio Website</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/d29c517391.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio Website</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/d29c517391.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <div id="header">
-    <div class="container">
-      <nav>
-        <img src="images/user-img.png" class="about-img" alt="About Me">
+<!-- Header -->
+<div id="header">
+<div class="container">
 
-        <img src="c:\Users\anmol\Downloads\1000014785 (1).png" alt="Logo" class="logo">
-        <ul>
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<nav>
 
-      <div class="header-text">
-        <p>Software Developer</p>
-        <h1>Hi, I'm <span>Anmol Aditya</span><br>From India</h1>
-      </div>
-    </div>
-  </div>
+<img src="images/logo.png" class="logo">
 
-  <!-- About -->
-  <div id="about">
-    <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="images/user-img.png" alt="About Me">
-        </div>
+<ul id="sidemenu">
+<li><a href="#header">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
 
-        <div class="about-col-2">
-          <h1 class="sub-title">About Me</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+<i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+</ul>
 
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-          </div>
+<i class="fa-solid fa-bars" onclick="openmenu()"></i>
 
-          <!-- Skills -->
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-              <li><span>Web Development</span><br>Building websites</li>
-              <li><span>Software Development</span><br>Building applications</li>
-            </ul>
-          </div>
+</nav>
 
-          <!-- Experience -->
-          <div class="tab-contents" id="experience">
-            <ul>
-              <li><span>Intern</span><br>Jul 2025 - Sep 2025</li>
-              <li><span>Python Programming Intern</span><br>Data Analytics</li>
-            </ul>
-          </div>
+<div class="header-text">
+<p>Software Developer</p>
+<h1>Hi, I'm <span>Anmol Aditya</span><br>From India</h1>
+</div>
 
-          <!-- Education -->
-          <div class="tab-contents" id="education">
-            <ul>
-              <li><span>2023</span><br>B.Tech - Arya College Of Engineering</li>
-              <li><span>2021</span><br>12th - DAV Public School</li>
-            </ul>
-          </div>
+</div>
+</div>
 
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- About -->
+<div id="about">
+<div class="container">
+<div class="row">
 
-  <!-- Services -->
-  <div id="services">
-    <div class="container">
-      <h1 class="sub-title">My Services</h1>
+<div class="about-col-1">
+<img src="images/user-img.png">
+</div>
 
-      <div class="services-list">
-        <div>
-          <i class="fa-solid fa-crop"></i>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-          <a href="#">Learn more</a>
-        </div>
+<div class="about-col-2">
 
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>UI/UX Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-          <a href="#">Learn more</a>
-        </div>
+<h1 class="sub-title">About Me</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
 
-        <div>
-          <i class="fa-brands fa-app-store"></i>
-          <h2>App Development</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-          <a href="#">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="tab-titles">
+<p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+<p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+<p class="tab-links" onclick="opentab('education', event)">Education</p>
+</div>
 
-  <!-- Portfolio -->
-  <div id="portfolio">
-    <div class="container">
-      <h1 class="sub-title">My Work</h1>
-     <div class="work-list">
-        <div class="work">
-          <img src="images/work1.jpg">
-          <div class="layer">
-            <h3>Social media app</h3>
+<div class="tab-contents active-tab" id="skills">
+<ul>
+<li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+<li><span>Web Development</span><br>Building websites</li>
+<li><span>Software Development</span><br>Building applications</li>
+</ul>
+</div>
 
-            <p>The app connects you to the talented people around the world.Download it from the playstore.</p>
-          
-        </div>
+<div class="tab-contents" id="experience">
+<ul>
+<li><span>Intern</span><br>Jul 2025 - Sep 2025</li>
+<li><span>Python Programming Intern</span><br>Data Analytics</li>
+</ul>
+</div>
 
-        <div>
-          <img src="images/work2.jpg">
-         
-        </div>
+<div class="tab-contents" id="education">
+<ul>
+<li><span>2023</span><br>B.Tech - Arya College Of Engineering</li>
+<li><span>2021</span><br>12th - DAV Public School</li>
+</ul>
+</div>
 
-        <div>
-          <img src="images/work3.jpg">
-         
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
 
-  <!-- Script -->
-  <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+<!-- Services -->
+<div id="services">
+<div class="container">
 
-    function opentab(tabname) {
-      for (let tablink of tablinks) {
-        tablink.classList.remove("active-link");
-      }
-      for (let tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-  </script>
+<h1 class="sub-title">My Services</h1>
+
+<div class="services-list">
+
+<div>
+<i class="fa-solid fa-crop"></i>
+<h2>Web Design</h2>
+<p>Lorem ipsum...</p>
+<a href="#">Learn more</a>
+</div>
+
+<div>
+<i class="fa-solid fa-code"></i>
+<h2>UI/UX Design</h2>
+<p>Lorem ipsum...</p>
+<a href="#">Learn more</a>
+</div>
+
+<div>
+<i class="fa-brands fa-app-store"></i>
+<h2>App Development</h2>
+<p>Lorem ipsum...</p>
+<a href="#">Learn more</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- Portfolio -->
+<div id="portfolio">
+<div class="container">
+
+<h1 class="sub-title">My Work</h1>
+
+<div class="work-list">
+
+<div class="work">
+<img src="images/work1.jpg">
+
+<div class="layer">
+<h3>Social Media App</h3>
+<p>The app connects talented people around the world.</p>
+</div>
+
+</div>
+
+<div class="work">
+<img src="images/work2.jpg">
+</div>
+
+<div class="work">
+<img src="images/work3.jpg">
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- Contact -->
+<div id="contact">
+<div class="container">
+
+<h1 class="sub-title">Contact Me</h1>
+
+<p><i class="fa-solid fa-envelope"></i> anmoladitya0255@gmail.com</p>
+
+<div class="social-icons">
+
+<a href="https://github.com/Anmol2112-sys" target="_blank">
+<i class="fa-brands fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/anmol-aditya-23a71a276" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+</a>
+
+<a href="https://leetcode.com/u/anmoladitya/" target="_blank">
+<i class="fa-solid fa-code"></i>
+</a>
+
+<a href="https://www.hackerrank.com/profile/anmoladitya0255" target="_blank">
+<i class="fa-brands fa-hackerrank"></i>
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- JavaScript -->
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname, event){
+
+for (let tablink of tablinks){
+tablink.classList.remove("active-link");
+}
+
+for (let tabcontent of tabcontents){
+tabcontent.classList.remove("active-tab");
+}
+
+event.currentTarget.classList.add("active-link");
+document.getElementById(tabname).classList.add("active-tab");
+
+}
+
+
+
+// Menu
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+sidemenu.style.right = "0";
+}
+
+function closemenu(){
+sidemenu.style.right = "-200px";
+}
+
+</script>
 
 </body>
 </html>
